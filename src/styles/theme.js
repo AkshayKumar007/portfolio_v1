@@ -9,7 +9,7 @@ export const sharedPreferences = {
     lg: "1280px",
     xl: "2000px",
   },
-  borderRadius: "1rem",
+  borderRadius: "0.4rem",
   pageWidth: "62.5rem",
   headerHeight: "6.25rem",
   footerHeight: "7.5rem",

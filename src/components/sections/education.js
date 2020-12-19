@@ -112,7 +112,7 @@ const StyledContentWrapper = styled(ContentWrapper)`
   }
 `
 
-const Articles = () => {
+const Education = () => {
   const MAX_ARTICLES = shownArticles
 
   const { isIntroDone, darkMode } = useContext(Context).state
@@ -208,4 +208,4 @@ const Articles = () => {
   )
 }
 
-export default Articles
+export default Education

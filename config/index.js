@@ -66,8 +66,8 @@ module.exports = {
         "https://github.com/AkshayKumar007/",
     },
     {
-      name: "Behance",
-      url: "https://www.behance.net/konstanmnster",
+      name: "HackerEarth",
+      url: "https://www.hackerearth.com/@akshayk007",
     },
   ],
 
