@@ -1,8 +1,8 @@
 module.exports = {
   //-- SITE SETTINGS -----
-  author: "@konstantinmuenster",
-  siteTitle: "Gatsby Starter Portfolio Minimal",
-  siteShortTitle: "Gatsby", // Used as logo text in header, footer, and splash screen
+  author: "@AkshayKumar007",
+  siteTitle: "Portfolio v1",
+  siteShortTitle: "Akshay", // Used as logo text in header, footer, and splash screen
   siteDescription:
     "A modern one-page portfolio with a clean yet expressive design.",
   siteUrl: "https://gatsby-starter-portfolio-minimal.netlify.app/",
@@ -25,13 +25,13 @@ module.exports = {
       boxShadowHover: "rgba(0, 0, 0, 0.32)",
     },
     darkTheme: {
-      primary: "#FAFAFA",
-      secondary: "#2A2926",
-      tertiary: "#252525",
-      text: "rgba(255, 255, 255, 0.87)",
+      primary: "#00D4FF",//"#FAFAFA",
+      secondary: "#7A73FF", //"#2A2926",
+      tertiary: "#FFD96A",//#252525",
+      text: "rgba(255, 255, 255, 0.9)",
       subtext: "#AAAAAA",
-      background: "#121212",
-      card: "#1C1C1C",
+      background: "#0A192F", // "#121212",
+      card: "#172A45", // #1C1C1C",
       scrollBar: "rgba(255, 255, 255, 0.5)",
       boxShadow: "rgba(0, 0, 0, 0.16)",
       boxShadowHover: "rgba(0, 0, 0, 0.32)",
@@ -54,16 +54,16 @@ module.exports = {
   socialMedia: [
     {
       name: "Linkedin",
-      url: "https://www.linkedin.com/in/konstantin-muenster/",
+      url: "https://www.linkedin.com/in/akshay-kumar-b8025a130/",
     },
     {
-      name: "Medium",
-      url: "https://konstantinmuenster.medium.com/",
+      name: "Twitter",
+      url: "https://twitter.com/eternal_coder",
     },
     {
       name: "Github",
       url:
-        "https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal",
+        "https://github.com/AkshayKumar007/",
     },
     {
       name: "Behance",
@@ -75,21 +75,25 @@ module.exports = {
   navLinks: {
     menu: [
       {
-        name: "Articles",
-        url: "/#articles",
-      },
-      {
-        name: "About Me",
+        name: "1. About Me",
         url: "/#about",
       },
       {
-        name: "Features",
+        name: "2. Projects",
+        url: "/#articles",
+      },
+      {
+        name: "3. Skills",
         url: "/#projects",
+      },
+      {
+        name: "4. Contact",
+        url: "/#contact",
       },
     ],
     button: {
-      name: "Contact",
-      url: "/#contact",
+      name: "Resume",
+      url: "https://drive.google.com/file/d/1dPhLxX38scqhkUOh0Jr8NLQCm8GYDb2R/view?usp=sharing",
     },
   },
   footerLinks: [

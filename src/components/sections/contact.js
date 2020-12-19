@@ -1,14 +1,17 @@
 import React, { useRef } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { motion } from "framer-motion"
 
-import { useOnScreen } from "../../hooks"
-import ContentWrapper from "../../styles/contentWrapper"
-import Underlining from "../../styles/underlining"
-import Social from "../social"
+import { useOnScreen } from "../../hooks";
+import { clipBoard } from "../../hooks";
+import ContentWrapper from "../../styles/contentWrapper";
+import CodeBlock from 'react-copy-code';
+// import Underlining from "../../styles/underlining"
+// import useClipboard from "react-use-clipboard";
+import Social from "../social";
 
 const StyledSection = styled(motion.section)`
   width: 100%;
@@ -69,7 +72,9 @@ const Contact = ({ content }) => {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   }
-
+  // const email_copy = clipBoard(frontmatter.email);
+  const email_copy = clipBoard;
+  console.log(clipBoard);
   return (
     <StyledSection
       id="contact"
@@ -81,16 +86,17 @@ const Contact = ({ content }) => {
         <h3>{frontmatter.title}</h3>
         <MDXRenderer>{body}</MDXRenderer>
         <div className="profile">
-          <Img
+          {/* <Img
             className="avatar"
             fluid={frontmatter.profileImage.childImageSharp.fluid}
-          />
+          /> */}
           <div className="details">
             <strong>{frontmatter.name}</strong>
-            <br />
+            {/* <br /> */}
             <a href={`mailto:${frontmatter.email}`}>
-              <Underlining highlight>{frontmatter.email}</Underlining>
+              {frontmatter.email}
             </a>
+            <CodeBlock innerHtml> {frontmatter.email} </CodeBlock>
           </div>
         </div>
         <Social width="9rem" padding="0.5rem 1.25rem" withIcon />
@@ -98,6 +104,7 @@ const Contact = ({ content }) => {
     </StyledSection>
   )
 }
+
 
 Contact.propTypes = {
   content: PropTypes.arrayOf(

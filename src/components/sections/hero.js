@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { motion, useAnimation } from "framer-motion"
 
@@ -19,7 +19,7 @@ const StyledSection = styled.section`
 `
 
 const StyledContentWrapper = styled(ContentWrapper)`
-  && {
+&& {
     width: 100%;
     height: 100%;
     min-height: 60vh;
@@ -29,34 +29,116 @@ const StyledContentWrapper = styled(ContentWrapper)`
     margin-bottom: 6rem;
     @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
       margin-bottom: 4rem;
-    }
+  }
     .greetings {
+      
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+        margin-top: 3rem;
+        margin-left:0.5rem;
+        font-size: 1.25rem;
+      }
+      @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+        margin-top: 3rem;
+        font-size: 1.25rem;
+      }
+      @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+        margin-top: 1rem;
+        font-size: 1rem;
+      }
+      @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+      }
     }
     .emoji {
       margin-left: 0.75rem;
       width: 2.2rem;
       height: 2.2rem;
-      @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+      @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
         margin-left: 1rem;
         width: 3rem;
         height: 3rem;
       }
     }
     .title {
+      margin-top: 2rem;
       margin-bottom: 1.5rem;
-      @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-        margin-bottom: 0;
+      color:${({ theme }) => theme.colors.tertiary};
+      font-size: 5rem;
+      font-weight:bold;
+      @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+        margin-top: 3rem;
+        font-size: 5rem;
+        margin-bottom: 1.5;
+      }
+      @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+        margin-top: 2rem;
+        font-size: 5rem;
+        margin-bottom: 1.5;
+      }
+      @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+        margin-top: 2rem;
+        font-size: 3rem;
+        margin-bottom: 1.5;
+      }
+      @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+        margin-top: 1rem;
+        font-size: 2.5rem;
+        margin-bottom: 0.5;
       }
     }
     .subtitle {
-      margin-top: -0.75rem;
+      color:${({ theme }) => theme.colors.secondary};
+      font-size: 5rem;
+      font-weight:bold;
+      margin-top: 4rem;
+      @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+        margin-top: 4rem;
+        font-size: 4.5rem;
+        margin-bottom: 1.5;
+      }
+      @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+        margin-top: 4rem;
+        font-size: 4.5rem;
+        margin-bottom: 1.5;
+      }
+      @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+        margin-top: 2rem;
+        font-size: 2.5rem;
+        margin-bottom: 1.5;
+      }
+      @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+        margin-top: 1rem;
+        font-size: 2rem;
+        margin-bottom: 0.5;
+      }
     }
     .description {
       font-size: 1.125rem;
       margin-bottom: 2rem;
+      @media (max-width: ${({ theme }) => theme.breakpoints.xl}) {
+        margin-top: 3rem;
+        font-size: 1.25rem;
+        margin-bottom: 1.5;
+      }
+      @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
+        margin-top: 3rem;
+        font-size: 1.25rem;
+        margin-bottom: 1.5;
+      }
+      @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+        margin-top: 1rem;
+        font-size: 1rem;
+        margin-bottom: 1.5;
+      }
+      @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.5;
+      }
     }
   }
 `
@@ -111,27 +193,22 @@ const Hero = ({ content }) => {
           animate={gControls}
           data-testid="animated-heading"
         >
-          <h1 className="title">
-            <div className="greetings">
-              {frontmatter.greetings}
-              <motion.div
-                animate={eControls}
-                style={{ originX: 0.7, originY: 0.7 }}
-              >
-                <Img
-                  className="emoji"
-                  fluid={frontmatter.icon.childImageSharp.fluid}
-                />
-              </motion.div>
-            </div>
-            {frontmatter.title}
-          </h1>
-          <h2 className="subtitle">
+        <div className="greetings">
+          {frontmatter.greetings}
+        </div>
+        <div className="title">
+          {frontmatter.title}
+        </div> 
+          <div className="subtitle">
             {frontmatter.subtitlePrefix}{" "}
-            <AnimatedUnderlining animate={uControls} big>
+            {/* <AnimatedUnderlining animate={uControls} big> */}
               {frontmatter.subtitle}
-            </AnimatedUnderlining>
-          </h2>
+            {/* </AnimatedUnderlining> */}
+          </div>
+          {/* <Img
+            className="emoji"
+            fluid={frontmatter.icon.childImageSharp.fluid}
+          /> */}
           <div className="description">
             <MDXRenderer>{body}</MDXRenderer>
           </div>

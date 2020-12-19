@@ -10,7 +10,7 @@ const StyledNav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 31.25rem;
+    width: 33.25rem;
     background: ${({ theme }) => theme.colors.background};
     a {
       color: ${({ theme }) => theme.colors.primary};
@@ -28,7 +28,7 @@ const StyledNav = styled.nav`
       height: 0.1563rem;
       content: "";
       position: absolute;
-      background-color: ${({ theme }) => theme.colors.primary};
+      background-color: ${({ theme }) => theme.colors.secondary};
       width: 0%;
       bottom: -0.125rem;
     }
@@ -37,6 +37,7 @@ const StyledNav = styled.nav`
     }
   }
   .cta-btn {
+    
     width: auto;
     height: auto;
     font-weight: 700;
@@ -46,7 +47,7 @@ const StyledNav = styled.nav`
     transition: 20ms ease-out;
     font-size: 1rem;
     padding: 0.5rem 1.5rem;
-    margin: 0;
+    margin: 0 0 0 1rem;
     &:hover {
       background: ${({ theme }) => theme.colors.primary};
       color: ${({ theme }) => theme.colors.background};

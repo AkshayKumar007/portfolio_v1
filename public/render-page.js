@@ -1,12 +1,12 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("/home/akshay/Code_/JavaScript/REACT_Projects/gatsby-starter-portfolio-minimal/node_modules/@reach/router/index.js"), require("fs"), require("/home/akshay/Code_/JavaScript/REACT_Projects/gatsby-starter-portfolio-minimal/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
+		module.exports = factory(require("/home/akshay/Code_/JavaScript/REACT_Projects/portfolio_v1/node_modules/@reach/router/index.js"), require("fs"), require("/home/akshay/Code_/JavaScript/REACT_Projects/portfolio_v1/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else if(typeof define === 'function' && define.amd)
-		define("lib", ["/home/akshay/Code_/JavaScript/REACT_Projects/gatsby-starter-portfolio-minimal/node_modules/@reach/router/index.js", "fs", "/home/akshay/Code_/JavaScript/REACT_Projects/gatsby-starter-portfolio-minimal/node_modules/lodash/merge.js", "path", "react", "react-dom/server", "react-helmet"], factory);
+		define("lib", ["/home/akshay/Code_/JavaScript/REACT_Projects/portfolio_v1/node_modules/@reach/router/index.js", "fs", "/home/akshay/Code_/JavaScript/REACT_Projects/portfolio_v1/node_modules/lodash/merge.js", "path", "react", "react-dom/server", "react-helmet"], factory);
 	else if(typeof exports === 'object')
-		exports["lib"] = factory(require("/home/akshay/Code_/JavaScript/REACT_Projects/gatsby-starter-portfolio-minimal/node_modules/@reach/router/index.js"), require("fs"), require("/home/akshay/Code_/JavaScript/REACT_Projects/gatsby-starter-portfolio-minimal/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
+		exports["lib"] = factory(require("/home/akshay/Code_/JavaScript/REACT_Projects/portfolio_v1/node_modules/@reach/router/index.js"), require("fs"), require("/home/akshay/Code_/JavaScript/REACT_Projects/portfolio_v1/node_modules/lodash/merge.js"), require("path"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else
-		root["lib"] = factory(root["/home/akshay/Code_/JavaScript/REACT_Projects/gatsby-starter-portfolio-minimal/node_modules/@reach/router/index.js"], root["fs"], root["/home/akshay/Code_/JavaScript/REACT_Projects/gatsby-starter-portfolio-minimal/node_modules/lodash/merge.js"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"]);
+		root["lib"] = factory(root["/home/akshay/Code_/JavaScript/REACT_Projects/portfolio_v1/node_modules/@reach/router/index.js"], root["fs"], root["/home/akshay/Code_/JavaScript/REACT_Projects/portfolio_v1/node_modules/lodash/merge.js"], root["path"], root["react"], root["react-dom/server"], root["react-helmet"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE__reach_router__, __WEBPACK_EXTERNAL_MODULE_fs__, __WEBPACK_EXTERNAL_MODULE_lodash_merge__, __WEBPACK_EXTERNAL_MODULE_path__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__, __WEBPACK_EXTERNAL_MODULE_react_helmet__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -134,8 +134,8 @@ var plugins = [{
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-manifest/gatsby-ssr */ "./node_modules/gatsby-plugin-manifest/gatsby-ssr.js"),
   options: {
     "plugins": [],
-    "name": "Gatsby Starter Portfolio Minimal",
-    "short_name": "Gatsby",
+    "name": "Portfolio v1",
+    "short_name": "Akshay Kumar",
     "start_url": "/",
     "background_color": "#FFFFFF",
     "theme_color": "#000000",
@@ -146,7 +146,7 @@ var plugins = [{
     "cache_busting_mode": "query",
     "crossOrigin": "anonymous",
     "include_favicon": true,
-    "cacheDigest": "d48eafceaf44a7dcd7ae15ab27bfe91b"
+    "cacheDigest": null
   }
 }, {
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-mdx/gatsby-ssr */ "./node_modules/gatsby-plugin-mdx/gatsby-ssr.js"),
@@ -525,8 +525,7 @@ HTML.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
 /* harmony import */ var lodash_merge__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash/merge */ "lodash/merge");
 /* harmony import */ var lodash_merge__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lodash_merge__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
@@ -540,7 +539,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 
@@ -550,7 +549,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 // So in the meantime, we'll just inline it.
 
 var testRequireError = function testRequireError(moduleName, err) {
-  var regex = new RegExp("Error: Cannot find module\\s.".concat(moduleName));
+  var regex = new RegExp("Error: Cannot find module\\s." + moduleName);
   var firstLine = err.toString().split("\n")[0];
   return regex.test(firstLine);
 };
@@ -568,7 +567,7 @@ try {
   }
 }
 
-Html = Html && Html.__esModule ? Html["default"] : Html;
+Html = Html && Html.__esModule ? Html.default : Html;
 /* harmony default export */ __webpack_exports__["default"] = (function (pagePath, callback) {
   var headComponents = [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("meta", {
     key: "environment",
@@ -667,7 +666,7 @@ Html = Html && Html.__esModule ? Html["default"] : Html;
     })])
   }));
   htmlStr = Object(react_dom_server__WEBPACK_IMPORTED_MODULE_3__["renderToStaticMarkup"])(htmlElement);
-  htmlStr = "<!DOCTYPE html>".concat(htmlStr);
+  htmlStr = "<!DOCTYPE html>" + htmlStr;
   callback(null, htmlStr);
 });
 
@@ -931,7 +930,7 @@ var useStaticQuery = function useStaticQuery(query) {
   // catch the misuse of the API and give proper direction
 
   if (isNaN(Number(query))) {
-    throw new Error("useStaticQuery was called with a string but expects to be called using `graphql`. Try this:\n\nimport { useStaticQuery, graphql } from 'gatsby';\n\nuseStaticQuery(graphql`".concat(query, "`);\n"));
+    throw new Error("useStaticQuery was called with a string but expects to be called using `graphql`. Try this:\n\nimport { useStaticQuery, graphql } from 'gatsby';\n\nuseStaticQuery(graphql`" + query + "`);\n");
   }
 
   if ((_context$query = context[query]) !== null && _context$query !== void 0 && _context$query.data) {
@@ -971,44 +970,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setLoader", function() { return setLoader; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "publicLoader", function() { return publicLoader; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticQueryResults", function() { return getStaticQueryResults; });
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/get */ "./node_modules/@babel/runtime/helpers/get.js");
-/* harmony import */ var _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/@babel/runtime/helpers/inherits.js");
-/* harmony import */ var _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/toConsumableArray */ "./node_modules/@babel/runtime/helpers/toConsumableArray.js");
-/* harmony import */ var _babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js");
-/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js");
-/* harmony import */ var _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js");
-/* harmony import */ var _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _prefetch__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./prefetch */ "./.cache/prefetch.js");
-/* harmony import */ var _emitter__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./emitter */ "./.cache/emitter.js");
-/* harmony import */ var _find_path__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./find-path */ "./.cache/find-path.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _prefetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./prefetch */ "./.cache/prefetch.js");
+/* harmony import */ var _emitter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./emitter */ "./.cache/emitter.js");
+/* harmony import */ var _find_path__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./find-path */ "./.cache/find-path.js");
 
 
 
-
-
-
-
-
-
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 
@@ -1030,7 +1004,7 @@ var PageResourceStatus = {
 };
 
 var preferDefault = function preferDefault(m) {
-  return m && m["default"] || m;
+  return m && m.default || m;
 };
 
 var stripSurroundingSlashes = function stripSurroundingSlashes(s) {
@@ -1041,11 +1015,14 @@ var stripSurroundingSlashes = function stripSurroundingSlashes(s) {
 
 var createPageDataUrl = function createPageDataUrl(path) {
   var fixedPath = path === "/" ? "index" : stripSurroundingSlashes(path);
-  return "".concat("", "/page-data/").concat(fixedPath, "/page-data.json");
+  return "" + "/page-data/" + fixedPath + "/page-data.json";
 };
 
-function doFetch(url) {
-  var method = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "GET";
+function doFetch(url, method) {
+  if (method === void 0) {
+    method = "GET";
+  }
+
   return new Promise(function (resolve, reject) {
     var req = new XMLHttpRequest();
     req.open(method, url, true);
@@ -1074,8 +1051,11 @@ var doesConnectionSupportPrefetch = function doesConnectionSupportPrefetch() {
   return true;
 };
 
-var toPageResources = function toPageResources(pageData) {
-  var component = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+var toPageResources = function toPageResources(pageData, component) {
+  if (component === void 0) {
+    component = null;
+  }
+
   var page = {
     componentChunkName: pageData.componentChunkName,
     path: pageData.path,
@@ -1092,10 +1072,7 @@ var toPageResources = function toPageResources(pageData) {
 
 var BaseLoader = /*#__PURE__*/function () {
   function BaseLoader(loadComponent, matchPaths) {
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_6___default()(this, BaseLoader);
-
-    _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_8___default()(this, "inFlightNetworkRequests", new Map());
-
+    this.inFlightNetworkRequests = new Map();
     // Map of pagePath -> Page. Where Page is an object with: {
     //   status: PageResourceStatus.Success || PageResourceStatus.Error,
     //   payload: PageResources, // undefined if PageResourceStatus.Error
@@ -1118,393 +1095,380 @@ var BaseLoader = /*#__PURE__*/function () {
     this.prefetchTriggered = new Set();
     this.prefetchCompleted = new Set();
     this.loadComponent = loadComponent;
-    Object(_find_path__WEBPACK_IMPORTED_MODULE_11__["setMatchPaths"])(matchPaths);
+    Object(_find_path__WEBPACK_IMPORTED_MODULE_5__["setMatchPaths"])(matchPaths);
   }
 
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_7___default()(BaseLoader, [{
-    key: "memoizedGet",
-    value: function memoizedGet(url) {
-      var _this = this;
+  var _proto = BaseLoader.prototype;
 
-      var inFlightPromise = this.inFlightNetworkRequests.get(url);
+  _proto.memoizedGet = function memoizedGet(url) {
+    var _this = this;
 
-      if (!inFlightPromise) {
-        inFlightPromise = doFetch(url, "GET");
-        this.inFlightNetworkRequests.set(url, inFlightPromise);
-      } // Prefer duplication with then + catch over .finally to prevent problems in ie11 + firefox
+    var inFlightPromise = this.inFlightNetworkRequests.get(url);
+
+    if (!inFlightPromise) {
+      inFlightPromise = doFetch(url, "GET");
+      this.inFlightNetworkRequests.set(url, inFlightPromise);
+    } // Prefer duplication with then + catch over .finally to prevent problems in ie11 + firefox
 
 
-      return inFlightPromise.then(function (response) {
-        _this.inFlightNetworkRequests["delete"](url);
+    return inFlightPromise.then(function (response) {
+      _this.inFlightNetworkRequests.delete(url);
 
-        return response;
-      })["catch"](function (err) {
-        _this.inFlightNetworkRequests["delete"](url);
+      return response;
+    }).catch(function (err) {
+      _this.inFlightNetworkRequests.delete(url);
 
-        throw err;
-      });
-    }
-  }, {
-    key: "setApiRunner",
-    value: function setApiRunner(apiRunner) {
-      this.apiRunner = apiRunner;
-      this.prefetchDisabled = apiRunner("disableCorePrefetching").some(function (a) {
-        return a;
-      });
-    }
-  }, {
-    key: "fetchPageDataJson",
-    value: function fetchPageDataJson(loadObj) {
-      var _this2 = this;
+      throw err;
+    });
+  };
 
-      var pagePath = loadObj.pagePath,
-          _loadObj$retries = loadObj.retries,
-          retries = _loadObj$retries === void 0 ? 0 : _loadObj$retries;
-      var url = createPageDataUrl(pagePath);
-      return this.memoizedGet(url).then(function (req) {
-        var status = req.status,
-            responseText = req.responseText; // Handle 200
+  _proto.setApiRunner = function setApiRunner(apiRunner) {
+    this.apiRunner = apiRunner;
+    this.prefetchDisabled = apiRunner("disableCorePrefetching").some(function (a) {
+      return a;
+    });
+  };
 
-        if (status === 200) {
-          try {
-            var jsonPayload = JSON.parse(responseText);
+  _proto.fetchPageDataJson = function fetchPageDataJson(loadObj) {
+    var _this2 = this;
 
-            if (jsonPayload.path === undefined) {
-              throw new Error("not a valid pageData response");
-            }
+    var pagePath = loadObj.pagePath,
+        _loadObj$retries = loadObj.retries,
+        retries = _loadObj$retries === void 0 ? 0 : _loadObj$retries;
+    var url = createPageDataUrl(pagePath);
+    return this.memoizedGet(url).then(function (req) {
+      var status = req.status,
+          responseText = req.responseText; // Handle 200
 
-            return Object.assign(loadObj, {
-              status: PageResourceStatus.Success,
-              payload: jsonPayload
-            });
-          } catch (err) {// continue regardless of error
+      if (status === 200) {
+        try {
+          var jsonPayload = JSON.parse(responseText);
+
+          if (jsonPayload.path === undefined) {
+            throw new Error("not a valid pageData response");
           }
-        } // Handle 404
+
+          return Object.assign(loadObj, {
+            status: PageResourceStatus.Success,
+            payload: jsonPayload
+          });
+        } catch (err) {// continue regardless of error
+        }
+      } // Handle 404
 
 
-        if (status === 404 || status === 200) {
-          // If the request was for a 404 page and it doesn't exist, we're done
-          if (pagePath === "/404.html") {
-            return Object.assign(loadObj, {
-              status: PageResourceStatus.Error
-            });
-          } // Need some code here to cache the 404 request. In case
-          // multiple loadPageDataJsons result in 404s
-
-
-          return _this2.fetchPageDataJson(Object.assign(loadObj, {
-            pagePath: "/404.html",
-            notFound: true
-          }));
-        } // handle 500 response (Unrecoverable)
-
-
-        if (status === 500) {
+      if (status === 404 || status === 200) {
+        // If the request was for a 404 page and it doesn't exist, we're done
+        if (pagePath === "/404.html") {
           return Object.assign(loadObj, {
             status: PageResourceStatus.Error
           });
-        } // Handle everything else, including status === 0, and 503s. Should retry
+        } // Need some code here to cache the 404 request. In case
+        // multiple loadPageDataJsons result in 404s
 
 
-        if (retries < 3) {
-          return _this2.fetchPageDataJson(Object.assign(loadObj, {
-            retries: retries + 1
-          }));
-        } // Retried 3 times already, result is an error.
+        return _this2.fetchPageDataJson(Object.assign(loadObj, {
+          pagePath: "/404.html",
+          notFound: true
+        }));
+      } // handle 500 response (Unrecoverable)
 
 
+      if (status === 500) {
         return Object.assign(loadObj, {
           status: PageResourceStatus.Error
         });
+      } // Handle everything else, including status === 0, and 503s. Should retry
+
+
+      if (retries < 3) {
+        return _this2.fetchPageDataJson(Object.assign(loadObj, {
+          retries: retries + 1
+        }));
+      } // Retried 3 times already, result is an error.
+
+
+      return Object.assign(loadObj, {
+        status: PageResourceStatus.Error
       });
+    });
+  };
+
+  _proto.loadPageDataJson = function loadPageDataJson(rawPath) {
+    var _this3 = this;
+
+    var pagePath = Object(_find_path__WEBPACK_IMPORTED_MODULE_5__["findPath"])(rawPath);
+
+    if (this.pageDataDb.has(pagePath)) {
+      var pageData = this.pageDataDb.get(pagePath);
+
+      if (true) {
+        return Promise.resolve(pageData);
+      }
     }
-  }, {
-    key: "loadPageDataJson",
-    value: function loadPageDataJson(rawPath) {
-      var _this3 = this;
 
-      var pagePath = Object(_find_path__WEBPACK_IMPORTED_MODULE_11__["findPath"])(rawPath);
+    return this.fetchPageDataJson({
+      pagePath: pagePath
+    }).then(function (pageData) {
+      _this3.pageDataDb.set(pagePath, pageData);
 
-      if (this.pageDataDb.has(pagePath)) {
-        var pageData = this.pageDataDb.get(pagePath);
+      return pageData;
+    });
+  };
 
-        if (true) {
-          return Promise.resolve(pageData);
-        }
+  _proto.findMatchPath = function findMatchPath(rawPath) {
+    return Object(_find_path__WEBPACK_IMPORTED_MODULE_5__["findMatchPath"])(rawPath);
+  } // TODO check all uses of this and whether they use undefined for page resources not exist
+  ;
+
+  _proto.loadPage = function loadPage(rawPath) {
+    var _this4 = this;
+
+    var pagePath = Object(_find_path__WEBPACK_IMPORTED_MODULE_5__["findPath"])(rawPath);
+
+    if (this.pageDb.has(pagePath)) {
+      var page = this.pageDb.get(pagePath);
+
+      if (true) {
+        return Promise.resolve(page.payload);
+      }
+    }
+
+    if (this.inFlightDb.has(pagePath)) {
+      return this.inFlightDb.get(pagePath);
+    }
+
+    var inFlightPromise = Promise.all([this.loadAppData(), this.loadPageDataJson(pagePath)]).then(function (allData) {
+      var result = allData[1];
+
+      if (result.status === PageResourceStatus.Error) {
+        return {
+          status: PageResourceStatus.Error
+        };
       }
 
-      return this.fetchPageDataJson({
-        pagePath: pagePath
-      }).then(function (pageData) {
-        _this3.pageDataDb.set(pagePath, pageData);
+      var pageData = result.payload;
+      var _pageData = pageData,
+          componentChunkName = _pageData.componentChunkName,
+          _pageData$staticQuery = _pageData.staticQueryHashes,
+          staticQueryHashes = _pageData$staticQuery === void 0 ? [] : _pageData$staticQuery;
+      var finalResult = {};
 
-        return pageData;
+      var componentChunkPromise = _this4.loadComponent(componentChunkName).then(function (component) {
+        finalResult.createdAt = new Date();
+        var pageResources;
+
+        if (!component) {
+          finalResult.status = PageResourceStatus.Error;
+        } else {
+          finalResult.status = PageResourceStatus.Success;
+
+          if (result.notFound === true) {
+            finalResult.notFound = true;
+          }
+
+          pageData = Object.assign(pageData, {
+            webpackCompilationHash: allData[0] ? allData[0].webpackCompilationHash : ""
+          });
+          pageResources = toPageResources(pageData, component);
+        } // undefined if final result is an error
+
+
+        return pageResources;
       });
-    }
-  }, {
-    key: "findMatchPath",
-    value: function findMatchPath(rawPath) {
-      return Object(_find_path__WEBPACK_IMPORTED_MODULE_11__["findMatchPath"])(rawPath);
-    } // TODO check all uses of this and whether they use undefined for page resources not exist
 
-  }, {
-    key: "loadPage",
-    value: function loadPage(rawPath) {
-      var _this4 = this;
-
-      var pagePath = Object(_find_path__WEBPACK_IMPORTED_MODULE_11__["findPath"])(rawPath);
-
-      if (this.pageDb.has(pagePath)) {
-        var page = this.pageDb.get(pagePath);
-
-        if (true) {
-          return Promise.resolve(page.payload);
-        }
-      }
-
-      if (this.inFlightDb.has(pagePath)) {
-        return this.inFlightDb.get(pagePath);
-      }
-
-      var inFlightPromise = Promise.all([this.loadAppData(), this.loadPageDataJson(pagePath)]).then(function (allData) {
-        var result = allData[1];
-
-        if (result.status === PageResourceStatus.Error) {
+      var staticQueryBatchPromise = Promise.all(staticQueryHashes.map(function (staticQueryHash) {
+        // Check for cache in case this static query result has already been loaded
+        if (_this4.staticQueryDb[staticQueryHash]) {
+          var jsonPayload = _this4.staticQueryDb[staticQueryHash];
           return {
-            status: PageResourceStatus.Error
+            staticQueryHash: staticQueryHash,
+            jsonPayload: jsonPayload
           };
         }
 
-        var pageData = result.payload;
-        var _pageData = pageData,
-            componentChunkName = _pageData.componentChunkName,
-            _pageData$staticQuery = _pageData.staticQueryHashes,
-            staticQueryHashes = _pageData$staticQuery === void 0 ? [] : _pageData$staticQuery;
-        var finalResult = {};
-
-        var componentChunkPromise = _this4.loadComponent(componentChunkName).then(function (component) {
-          finalResult.createdAt = new Date();
-          var pageResources;
-
-          if (!component) {
-            finalResult.status = PageResourceStatus.Error;
-          } else {
-            finalResult.status = PageResourceStatus.Success;
-
-            if (result.notFound === true) {
-              finalResult.notFound = true;
-            }
-
-            pageData = Object.assign(pageData, {
-              webpackCompilationHash: allData[0] ? allData[0].webpackCompilationHash : ""
-            });
-            pageResources = toPageResources(pageData, component);
-          } // undefined if final result is an error
-
-
-          return pageResources;
+        return _this4.memoizedGet("" + "/page-data/sq/d/" + staticQueryHash + ".json").then(function (req) {
+          var jsonPayload = JSON.parse(req.responseText);
+          return {
+            staticQueryHash: staticQueryHash,
+            jsonPayload: jsonPayload
+          };
         });
-
-        var staticQueryBatchPromise = Promise.all(staticQueryHashes.map(function (staticQueryHash) {
-          // Check for cache in case this static query result has already been loaded
-          if (_this4.staticQueryDb[staticQueryHash]) {
-            var jsonPayload = _this4.staticQueryDb[staticQueryHash];
-            return {
-              staticQueryHash: staticQueryHash,
-              jsonPayload: jsonPayload
-            };
-          }
-
-          return _this4.memoizedGet("".concat("", "/page-data/sq/d/").concat(staticQueryHash, ".json")).then(function (req) {
-            var jsonPayload = JSON.parse(req.responseText);
-            return {
-              staticQueryHash: staticQueryHash,
-              jsonPayload: jsonPayload
-            };
-          });
-        })).then(function (staticQueryResults) {
-          var staticQueryResultsMap = {};
-          staticQueryResults.forEach(function (_ref) {
-            var staticQueryHash = _ref.staticQueryHash,
-                jsonPayload = _ref.jsonPayload;
-            staticQueryResultsMap[staticQueryHash] = jsonPayload;
-            _this4.staticQueryDb[staticQueryHash] = jsonPayload;
-          });
-          return staticQueryResultsMap;
+      })).then(function (staticQueryResults) {
+        var staticQueryResultsMap = {};
+        staticQueryResults.forEach(function (_ref) {
+          var staticQueryHash = _ref.staticQueryHash,
+              jsonPayload = _ref.jsonPayload;
+          staticQueryResultsMap[staticQueryHash] = jsonPayload;
+          _this4.staticQueryDb[staticQueryHash] = jsonPayload;
         });
-        return Promise.all([componentChunkPromise, staticQueryBatchPromise]).then(function (_ref2) {
-          var _ref3 = _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_5___default()(_ref2, 2),
-              pageResources = _ref3[0],
-              staticQueryResults = _ref3[1];
-
-          var payload;
-
-          if (pageResources) {
-            payload = _objectSpread(_objectSpread({}, pageResources), {}, {
-              staticQueryResults: staticQueryResults
-            });
-            finalResult.payload = payload;
-            _emitter__WEBPACK_IMPORTED_MODULE_10__["default"].emit("onPostLoadPageResources", {
-              page: payload,
-              pageResources: payload
-            });
-          }
-
-          _this4.pageDb.set(pagePath, finalResult);
-
-          return payload;
-        });
+        return staticQueryResultsMap;
       });
-      inFlightPromise.then(function (response) {
-        _this4.inFlightDb["delete"](pagePath);
-      })["catch"](function (error) {
-        _this4.inFlightDb["delete"](pagePath);
+      return Promise.all([componentChunkPromise, staticQueryBatchPromise]).then(function (_ref2) {
+        var pageResources = _ref2[0],
+            staticQueryResults = _ref2[1];
+        var payload;
 
-        throw error;
+        if (pageResources) {
+          payload = _objectSpread(_objectSpread({}, pageResources), {}, {
+            staticQueryResults: staticQueryResults
+          });
+          finalResult.payload = payload;
+          _emitter__WEBPACK_IMPORTED_MODULE_4__["default"].emit("onPostLoadPageResources", {
+            page: payload,
+            pageResources: payload
+          });
+        }
+
+        _this4.pageDb.set(pagePath, finalResult);
+
+        return payload;
       });
-      this.inFlightDb.set(pagePath, inFlightPromise);
-      return inFlightPromise;
-    } // returns undefined if loading page ran into errors
+    });
+    inFlightPromise.then(function (response) {
+      _this4.inFlightDb.delete(pagePath);
+    }).catch(function (error) {
+      _this4.inFlightDb.delete(pagePath);
 
-  }, {
-    key: "loadPageSync",
-    value: function loadPageSync(rawPath) {
-      var pagePath = Object(_find_path__WEBPACK_IMPORTED_MODULE_11__["findPath"])(rawPath);
+      throw error;
+    });
+    this.inFlightDb.set(pagePath, inFlightPromise);
+    return inFlightPromise;
+  } // returns undefined if loading page ran into errors
+  ;
 
-      if (this.pageDb.has(pagePath)) {
-        var pageData = this.pageDb.get(pagePath).payload;
-        return pageData;
-      }
+  _proto.loadPageSync = function loadPageSync(rawPath) {
+    var pagePath = Object(_find_path__WEBPACK_IMPORTED_MODULE_5__["findPath"])(rawPath);
 
-      return undefined;
+    if (this.pageDb.has(pagePath)) {
+      var pageData = this.pageDb.get(pagePath).payload;
+      return pageData;
     }
-  }, {
-    key: "shouldPrefetch",
-    value: function shouldPrefetch(pagePath) {
-      // Skip prefetching if we know user is on slow or constrained connection
-      if (!doesConnectionSupportPrefetch()) {
-        return false;
-      } // Check if the page exists.
+
+    return undefined;
+  };
+
+  _proto.shouldPrefetch = function shouldPrefetch(pagePath) {
+    // Skip prefetching if we know user is on slow or constrained connection
+    if (!doesConnectionSupportPrefetch()) {
+      return false;
+    } // Check if the page exists.
 
 
-      if (this.pageDb.has(pagePath)) {
-        return false;
-      }
-
-      return true;
+    if (this.pageDb.has(pagePath)) {
+      return false;
     }
-  }, {
-    key: "prefetch",
-    value: function prefetch(pagePath) {
-      var _this5 = this;
 
-      if (!this.shouldPrefetch(pagePath)) {
-        return false;
-      } // Tell plugins with custom prefetching logic that they should start
-      // prefetching this path.
+    return true;
+  };
+
+  _proto.prefetch = function prefetch(pagePath) {
+    var _this5 = this;
+
+    if (!this.shouldPrefetch(pagePath)) {
+      return false;
+    } // Tell plugins with custom prefetching logic that they should start
+    // prefetching this path.
 
 
-      if (!this.prefetchTriggered.has(pagePath)) {
-        this.apiRunner("onPrefetchPathname", {
+    if (!this.prefetchTriggered.has(pagePath)) {
+      this.apiRunner("onPrefetchPathname", {
+        pathname: pagePath
+      });
+      this.prefetchTriggered.add(pagePath);
+    } // If a plugin has disabled core prefetching, stop now.
+
+
+    if (this.prefetchDisabled) {
+      return false;
+    }
+
+    var realPath = Object(_find_path__WEBPACK_IMPORTED_MODULE_5__["findPath"])(pagePath); // Todo make doPrefetch logic cacheable
+    // eslint-disable-next-line consistent-return
+
+    this.doPrefetch(realPath).then(function () {
+      if (!_this5.prefetchCompleted.has(pagePath)) {
+        _this5.apiRunner("onPostPrefetchPathname", {
           pathname: pagePath
         });
-        this.prefetchTriggered.add(pagePath);
-      } // If a plugin has disabled core prefetching, stop now.
 
-
-      if (this.prefetchDisabled) {
-        return false;
+        _this5.prefetchCompleted.add(pagePath);
       }
+    });
+    return true;
+  };
 
-      var realPath = Object(_find_path__WEBPACK_IMPORTED_MODULE_11__["findPath"])(pagePath); // Todo make doPrefetch logic cacheable
-      // eslint-disable-next-line consistent-return
+  _proto.doPrefetch = function doPrefetch(pagePath) {
+    var _this6 = this;
 
-      this.doPrefetch(realPath).then(function () {
-        if (!_this5.prefetchCompleted.has(pagePath)) {
-          _this5.apiRunner("onPostPrefetchPathname", {
-            pathname: pagePath
-          });
+    var pageDataUrl = createPageDataUrl(pagePath);
+    return Object(_prefetch__WEBPACK_IMPORTED_MODULE_3__["default"])(pageDataUrl, {
+      crossOrigin: "anonymous",
+      as: "fetch"
+    }).then(function () {
+      return (// This was just prefetched, so will return a response from
+        // the cache instead of making another request to the server
+        _this6.loadPageDataJson(pagePath)
+      );
+    });
+  };
 
-          _this5.prefetchCompleted.add(pagePath);
-        }
-      });
-      return true;
+  _proto.hovering = function hovering(rawPath) {
+    this.loadPage(rawPath);
+  };
+
+  _proto.getResourceURLsForPathname = function getResourceURLsForPathname(rawPath) {
+    var pagePath = Object(_find_path__WEBPACK_IMPORTED_MODULE_5__["findPath"])(rawPath);
+    var page = this.pageDataDb.get(pagePath);
+
+    if (page) {
+      var pageResources = toPageResources(page.payload);
+      return [].concat(Object(_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(createComponentUrls(pageResources.page.componentChunkName)), [createPageDataUrl(pagePath)]);
+    } else {
+      return null;
     }
-  }, {
-    key: "doPrefetch",
-    value: function doPrefetch(pagePath) {
-      var _this6 = this;
+  };
 
-      var pageDataUrl = createPageDataUrl(pagePath);
-      return Object(_prefetch__WEBPACK_IMPORTED_MODULE_9__["default"])(pageDataUrl, {
-        crossOrigin: "anonymous",
-        as: "fetch"
-      }).then(function () {
-        return (// This was just prefetched, so will return a response from
-          // the cache instead of making another request to the server
-          _this6.loadPageDataJson(pagePath)
-        );
-      });
+  _proto.isPageNotFound = function isPageNotFound(rawPath) {
+    var pagePath = Object(_find_path__WEBPACK_IMPORTED_MODULE_5__["findPath"])(rawPath);
+    var page = this.pageDb.get(pagePath);
+    return !page || page.notFound;
+  };
+
+  _proto.loadAppData = function loadAppData(retries) {
+    var _this7 = this;
+
+    if (retries === void 0) {
+      retries = 0;
     }
-  }, {
-    key: "hovering",
-    value: function hovering(rawPath) {
-      this.loadPage(rawPath);
-    }
-  }, {
-    key: "getResourceURLsForPathname",
-    value: function getResourceURLsForPathname(rawPath) {
-      var pagePath = Object(_find_path__WEBPACK_IMPORTED_MODULE_11__["findPath"])(rawPath);
-      var page = this.pageDataDb.get(pagePath);
 
-      if (page) {
-        var pageResources = toPageResources(page.payload);
-        return [].concat(_babel_runtime_helpers_toConsumableArray__WEBPACK_IMPORTED_MODULE_4___default()(createComponentUrls(pageResources.page.componentChunkName)), [createPageDataUrl(pagePath)]);
-      } else {
-        return null;
-      }
-    }
-  }, {
-    key: "isPageNotFound",
-    value: function isPageNotFound(rawPath) {
-      var pagePath = Object(_find_path__WEBPACK_IMPORTED_MODULE_11__["findPath"])(rawPath);
-      var page = this.pageDb.get(pagePath);
-      return !page || page.notFound;
-    }
-  }, {
-    key: "loadAppData",
-    value: function loadAppData() {
-      var _this7 = this;
+    return this.memoizedGet("" + "/page-data/app-data.json").then(function (req) {
+      var status = req.status,
+          responseText = req.responseText;
+      var appData;
 
-      var retries = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-      return this.memoizedGet("".concat("", "/page-data/app-data.json")).then(function (req) {
-        var status = req.status,
-            responseText = req.responseText;
-        var appData;
-
-        if (status !== 200 && retries < 3) {
-          // Retry 3 times incase of non-200 responses
-          return _this7.loadAppData(retries + 1);
-        } // Handle 200
+      if (status !== 200 && retries < 3) {
+        // Retry 3 times incase of non-200 responses
+        return _this7.loadAppData(retries + 1);
+      } // Handle 200
 
 
-        if (status === 200) {
-          try {
-            var jsonPayload = JSON.parse(responseText);
+      if (status === 200) {
+        try {
+          var jsonPayload = JSON.parse(responseText);
 
-            if (jsonPayload.webpackCompilationHash === undefined) {
-              throw new Error("not a valid app-data response");
-            }
-
-            appData = jsonPayload;
-          } catch (err) {// continue regardless of error
+          if (jsonPayload.webpackCompilationHash === undefined) {
+            throw new Error("not a valid app-data response");
           }
-        }
 
-        return appData;
-      });
-    }
-  }]);
+          appData = jsonPayload;
+        } catch (err) {// continue regardless of error
+        }
+      }
+
+      return appData;
+    });
+  };
 
   return BaseLoader;
 }();
@@ -1516,66 +1480,60 @@ var createComponentUrls = function createComponentUrls(componentChunkName) {
 };
 
 var ProdLoader = /*#__PURE__*/function (_BaseLoader) {
-  _babel_runtime_helpers_inherits__WEBPACK_IMPORTED_MODULE_1___default()(ProdLoader, _BaseLoader);
-
-  var _super = _createSuper(ProdLoader);
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(ProdLoader, _BaseLoader);
 
   function ProdLoader(asyncRequires, matchPaths) {
-    _babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_6___default()(this, ProdLoader);
-
     var loadComponent = function loadComponent(chunkName) {
       return asyncRequires.components[chunkName] ? asyncRequires.components[chunkName]().then(preferDefault) // loader will handle the case when component is null
-      ["catch"](function () {
+      .catch(function () {
         return null;
       }) : Promise.resolve();
     };
 
-    return _super.call(this, loadComponent, matchPaths);
+    return _BaseLoader.call(this, loadComponent, matchPaths) || this;
   }
 
-  _babel_runtime_helpers_createClass__WEBPACK_IMPORTED_MODULE_7___default()(ProdLoader, [{
-    key: "doPrefetch",
-    value: function doPrefetch(pagePath) {
-      return _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_0___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(ProdLoader.prototype), "doPrefetch", this).call(this, pagePath).then(function (result) {
-        if (result.status !== PageResourceStatus.Success) {
-          return Promise.resolve();
-        }
+  var _proto2 = ProdLoader.prototype;
 
-        var pageData = result.payload;
-        var chunkName = pageData.componentChunkName;
-        var componentUrls = createComponentUrls(chunkName);
-        return Promise.all(componentUrls.map(_prefetch__WEBPACK_IMPORTED_MODULE_9__["default"])).then(function () {
-          return pageData;
+  _proto2.doPrefetch = function doPrefetch(pagePath) {
+    return _BaseLoader.prototype.doPrefetch.call(this, pagePath).then(function (result) {
+      if (result.status !== PageResourceStatus.Success) {
+        return Promise.resolve();
+      }
+
+      var pageData = result.payload;
+      var chunkName = pageData.componentChunkName;
+      var componentUrls = createComponentUrls(chunkName);
+      return Promise.all(componentUrls.map(_prefetch__WEBPACK_IMPORTED_MODULE_3__["default"])).then(function () {
+        return pageData;
+      });
+    });
+  };
+
+  _proto2.loadPageDataJson = function loadPageDataJson(rawPath) {
+    return _BaseLoader.prototype.loadPageDataJson.call(this, rawPath).then(function (data) {
+      if (data.notFound) {
+        // check if html file exist using HEAD request:
+        // if it does we should navigate to it instead of showing 404
+        return doFetch(rawPath, "HEAD").then(function (req) {
+          if (req.status === 200) {
+            // page (.html file) actually exist (or we asked for 404 )
+            // returning page resources status as errored to trigger
+            // regular browser navigation to given page
+            return {
+              status: PageResourceStatus.Error
+            };
+          } // if HEAD request wasn't 200, return notFound result
+          // and show 404 page
+
+
+          return data;
         });
-      });
-    }
-  }, {
-    key: "loadPageDataJson",
-    value: function loadPageDataJson(rawPath) {
-      return _babel_runtime_helpers_get__WEBPACK_IMPORTED_MODULE_0___default()(_babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(ProdLoader.prototype), "loadPageDataJson", this).call(this, rawPath).then(function (data) {
-        if (data.notFound) {
-          // check if html file exist using HEAD request:
-          // if it does we should navigate to it instead of showing 404
-          return doFetch(rawPath, "HEAD").then(function (req) {
-            if (req.status === 200) {
-              // page (.html file) actually exist (or we asked for 404 )
-              // returning page resources status as errored to trigger
-              // regular browser navigation to given page
-              return {
-                status: PageResourceStatus.Error
-              };
-            } // if HEAD request wasn't 200, return notFound result
-            // and show 404 page
+      }
 
-
-            return data;
-          });
-        }
-
-        return data;
-      });
-    }
-  }]);
+      return data;
+    });
+  };
 
   return ProdLoader;
 }(BaseLoader);
@@ -1736,7 +1694,7 @@ var prefetch = function prefetch(url, options) {
     supportedPrefetchStrategy(url, options).then(function () {
       resolve();
       preFetched[url] = true;
-    })["catch"](function () {}); // 404s are logged to the console anyway
+    }).catch(function () {}); // 404s are logged to the console anyway
   });
 };
 
@@ -1752,7 +1710,7 @@ var prefetch = function prefetch(url, options) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var preferDefault = function preferDefault(m) {
-  return m && m["default"] || m;
+  return m && m.default || m;
 };
 
 if (false) {} else if (false) {} else {
@@ -1777,8 +1735,10 @@ __webpack_require__.r(__webpack_exports__);
  * Remove a prefix from a string. Return the input string if the given prefix
  * isn't found.
  */
-function stripPrefix(str) {
-  var prefix = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "";
+function stripPrefix(str, prefix) {
+  if (prefix === void 0) {
+    prefix = "";
+  }
 
   if (!prefix) {
     return str;
@@ -1788,65 +1748,12 @@ function stripPrefix(str) {
     return "/";
   }
 
-  if (str.startsWith("".concat(prefix, "/"))) {
+  if (str.startsWith(prefix + "/")) {
     return str.slice(prefix.length);
   }
 
   return str;
 }
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/arrayLikeToArray.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/arrayLikeToArray.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) {
-    arr2[i] = arr[i];
-  }
-
-  return arr2;
-}
-
-module.exports = _arrayLikeToArray;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/arrayWithHoles.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/arrayWithHoles.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
-
-module.exports = _arrayWithHoles;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayLikeToArray = __webpack_require__(/*! ./arrayLikeToArray */ "./node_modules/@babel/runtime/helpers/arrayLikeToArray.js");
-
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return arrayLikeToArray(arr);
-}
-
-module.exports = _arrayWithoutHoles;
 
 /***/ }),
 
@@ -1869,73 +1776,43 @@ module.exports = _assertThisInitialized;
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/classCallCheck.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/classCallCheck.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _arrayLikeToArray; });
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
   }
-}
 
-module.exports = _classCallCheck;
+  return arr2;
+}
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/createClass.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/createClass.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _arrayWithoutHoles; });
+/* harmony import */ var _babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/arrayLikeToArray */ "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js");
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) return Object(_babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(arr);
 }
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-module.exports = _createClass;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/defineProperty.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/defineProperty.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-module.exports = _defineProperty;
 
 /***/ }),
 
@@ -1966,6 +1843,103 @@ function _defineProperty(obj, key, value) {
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _inheritsLoose; });
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  subClass.__proto__ = superClass;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/iterableToArray.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/iterableToArray.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _iterableToArray; });
+function _iterableToArray(iter) {
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _nonIterableSpread; });
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _toConsumableArray; });
+/* harmony import */ var _babel_runtime_helpers_esm_arrayWithoutHoles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/arrayWithoutHoles */ "./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js");
+/* harmony import */ var _babel_runtime_helpers_esm_iterableToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/iterableToArray */ "./node_modules/@babel/runtime/helpers/esm/iterableToArray.js");
+/* harmony import */ var _babel_runtime_helpers_esm_unsupportedIterableToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/unsupportedIterableToArray */ "./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js");
+/* harmony import */ var _babel_runtime_helpers_esm_nonIterableSpread__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/nonIterableSpread */ "./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js");
+
+
+
+
+function _toConsumableArray(arr) {
+  return Object(_babel_runtime_helpers_esm_arrayWithoutHoles__WEBPACK_IMPORTED_MODULE_0__["default"])(arr) || Object(_babel_runtime_helpers_esm_iterableToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(arr) || Object(_babel_runtime_helpers_esm_unsupportedIterableToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(arr) || Object(_babel_runtime_helpers_esm_nonIterableSpread__WEBPACK_IMPORTED_MODULE_3__["default"])();
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _unsupportedIterableToArray; });
+/* harmony import */ var _babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/arrayLikeToArray */ "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js");
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return Object(_babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Object(_babel_runtime_helpers_esm_arrayLikeToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(o, minLen);
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/extends.js":
 /*!********************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/extends.js ***!
@@ -1992,85 +1966,6 @@ function _extends() {
 }
 
 module.exports = _extends;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/get.js":
-/*!****************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/get.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var superPropBase = __webpack_require__(/*! ./superPropBase */ "./node_modules/@babel/runtime/helpers/superPropBase.js");
-
-function _get(target, property, receiver) {
-  if (typeof Reflect !== "undefined" && Reflect.get) {
-    module.exports = _get = Reflect.get;
-  } else {
-    module.exports = _get = function _get(target, property, receiver) {
-      var base = superPropBase(target, property);
-      if (!base) return;
-      var desc = Object.getOwnPropertyDescriptor(base, property);
-
-      if (desc.get) {
-        return desc.get.call(receiver);
-      }
-
-      return desc.value;
-    };
-  }
-
-  return _get(target, property, receiver || target);
-}
-
-module.exports = _get;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _getPrototypeOf(o) {
-  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-module.exports = _getPrototypeOf;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/inherits.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/inherits.js ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf */ "./node_modules/@babel/runtime/helpers/setPrototypeOf.js");
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) setPrototypeOf(subClass, superClass);
-}
-
-module.exports = _inherits;
 
 /***/ }),
 
@@ -2173,89 +2068,6 @@ module.exports = _interopRequireWildcard;
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime/helpers/iterableToArray.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/iterableToArray.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _iterableToArray(iter) {
-  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
-}
-
-module.exports = _iterableToArray;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _iterableToArrayLimit(arr, i) {
-  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-
-module.exports = _iterableToArrayLimit;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/nonIterableRest.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/nonIterableRest.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-module.exports = _nonIterableRest;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/nonIterableSpread.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/nonIterableSpread.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-module.exports = _nonIterableSpread;
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js":
 /*!*****************************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js ***!
@@ -2279,117 +2091,6 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 }
 
 module.exports = _objectWithoutPropertiesLoose;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js ***!
-  \**************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _typeof = __webpack_require__(/*! @babel/runtime/helpers/typeof */ "./node_modules/@babel/runtime/helpers/typeof.js");
-
-var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized */ "./node_modules/@babel/runtime/helpers/assertThisInitialized.js");
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return assertThisInitialized(self);
-}
-
-module.exports = _possibleConstructorReturn;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/setPrototypeOf.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/setPrototypeOf.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _setPrototypeOf(o, p) {
-  module.exports = _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  return _setPrototypeOf(o, p);
-}
-
-module.exports = _setPrototypeOf;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/slicedToArray.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/slicedToArray.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayWithHoles = __webpack_require__(/*! ./arrayWithHoles */ "./node_modules/@babel/runtime/helpers/arrayWithHoles.js");
-
-var iterableToArrayLimit = __webpack_require__(/*! ./iterableToArrayLimit */ "./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js");
-
-var unsupportedIterableToArray = __webpack_require__(/*! ./unsupportedIterableToArray */ "./node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js");
-
-var nonIterableRest = __webpack_require__(/*! ./nonIterableRest */ "./node_modules/@babel/runtime/helpers/nonIterableRest.js");
-
-function _slicedToArray(arr, i) {
-  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || unsupportedIterableToArray(arr, i) || nonIterableRest();
-}
-
-module.exports = _slicedToArray;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/superPropBase.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/superPropBase.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var getPrototypeOf = __webpack_require__(/*! ./getPrototypeOf */ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-
-function _superPropBase(object, property) {
-  while (!Object.prototype.hasOwnProperty.call(object, property)) {
-    object = getPrototypeOf(object);
-    if (object === null) break;
-  }
-
-  return object;
-}
-
-module.exports = _superPropBase;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/toConsumableArray.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/toConsumableArray.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayWithoutHoles = __webpack_require__(/*! ./arrayWithoutHoles */ "./node_modules/@babel/runtime/helpers/arrayWithoutHoles.js");
-
-var iterableToArray = __webpack_require__(/*! ./iterableToArray */ "./node_modules/@babel/runtime/helpers/iterableToArray.js");
-
-var unsupportedIterableToArray = __webpack_require__(/*! ./unsupportedIterableToArray */ "./node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js");
-
-var nonIterableSpread = __webpack_require__(/*! ./nonIterableSpread */ "./node_modules/@babel/runtime/helpers/nonIterableSpread.js");
-
-function _toConsumableArray(arr) {
-  return arrayWithoutHoles(arr) || iterableToArray(arr) || unsupportedIterableToArray(arr) || nonIterableSpread();
-}
-
-module.exports = _toConsumableArray;
 
 /***/ }),
 
@@ -2417,28 +2118,6 @@ function _typeof(obj) {
 }
 
 module.exports = _typeof;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/unsupportedIterableToArray.js ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayLikeToArray = __webpack_require__(/*! ./arrayLikeToArray */ "./node_modules/@babel/runtime/helpers/arrayLikeToArray.js");
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return arrayLikeToArray(o, minLen);
-}
-
-module.exports = _unsupportedIterableToArray;
 
 /***/ }),
 
@@ -35730,9 +35409,9 @@ var Underlining = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].span
 /***/ }),
 
 /***/ "@reach/router":
-/*!************************************************************************************************************************************!*\
-  !*** external "/home/akshay/Code_/JavaScript/REACT_Projects/gatsby-starter-portfolio-minimal/node_modules/@reach/router/index.js" ***!
-  \************************************************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** external "/home/akshay/Code_/JavaScript/REACT_Projects/portfolio_v1/node_modules/@reach/router/index.js" ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -35752,9 +35431,9 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_fs__;
 /***/ }),
 
 /***/ "lodash/merge":
-/*!*****************************************************************************************************************************!*\
-  !*** external "/home/akshay/Code_/JavaScript/REACT_Projects/gatsby-starter-portfolio-minimal/node_modules/lodash/merge.js" ***!
-  \*****************************************************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** external "/home/akshay/Code_/JavaScript/REACT_Projects/portfolio_v1/node_modules/lodash/merge.js" ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

@@ -3,10 +3,11 @@ const { colors, fonts } = require("../../config")
 export const sharedPreferences = {
   fonts: fonts,
   breakpoints: {
-    xs: "480px",
-    sm: "768px",
-    md: "992px",
-    lg: "1200px",
+    xs: "0px",
+    sm: "600px",
+    md: "960px",
+    lg: "1280px",
+    xl: "2000px",
   },
   borderRadius: "1rem",
   pageWidth: "62.5rem",

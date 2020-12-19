@@ -20,7 +20,7 @@ const StyledLogo = styled.div`
 
 const Logo = ({ size, color }) => (
   <StyledLogo color={color} size={size}>
-    {siteShortTitle}
+    {/* {siteShortTitle} */}
   </StyledLogo>
 )
 
