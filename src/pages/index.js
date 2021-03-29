@@ -1,178 +1,130 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { graphql } from "gatsby"
+import React, { Fragment } from 'react';
+import { graphql } from 'gatsby';
+import PropTypes from 'prop-types';
 
-import GlobalStateProvider from "../context/provider"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Hero from "../components/sections/hero"
-import Articles from "../components/sections/articles"
-import About from "../components/sections/about"
-import Interests from "../components/sections/interests"
-import Projects from "../components/sections/projects"
-import Contact from "../components/sections/contact"
-import { seoTitleSuffix } from "../../config"
+import Hero from '../components/Hero';
+import PageSEO from '../components/PageSEO';
+import HomeAbout from '../components/HomeAbout';
+import HomeExp from '../components/HomeExp';
+import HomeProjects from '../components/HomeProjects';
+import HomeClients from '../components/HomeClients';
+import Testimonials from '../components/Testimonials';
+import Recent from '../components/Recent';
 
-const IndexPage = ({ data }) => {
-  const { frontmatter } = data.index.edges[0].node
-  const { seoTitle, useSeoTitleSuffix, useSplashScreen } = frontmatter
-
-  const globalState = {
-    // if useSplashScreen=false, we skip the intro by setting isIntroDone=true
-    isIntroDone: useSplashScreen ? false : true,
-    // darkMode is initially disabled, a hook inside the Layout component
-    // will check the user's preferences and switch to dark mode if needed
-    darkMode: false,
-  }
-
+const IndexPage = ({ data: { home, blog, desktopImage, mobileImage } }) => {
   return (
-    <GlobalStateProvider initialState={globalState}>
-      <Layout>
-        <SEO
-          title={
-            useSeoTitleSuffix
-              ? `${seoTitle} - ${seoTitleSuffix}`
-              : `${seoTitle}`
-          }
-        />
-        <Hero content={data.hero.edges} />
-        {/* Articles is populated via Medium RSS Feed fetch */}
-        
-        <About content={data.about.edges} />
-        <Articles />
-        <Interests content={data.interests.edges} />
-        <Projects content={data.projects.edges} />
-        <Contact content={data.contact.edges} />
-      </Layout>
-    </GlobalStateProvider>
-  )
-}
+    <Fragment>
+      <PageSEO meta={home.seoMetaTags} />
+      <Hero
+        desktop={desktopImage.childImageSharp.fluid}
+        mobile={mobileImage.childImageSharp.fluid}
+        title={home.headline}
+      />
+      <HomeAbout title="About" body={home.aboutNode.childMarkdownRemark.html} />
+      <HomeExp blocks={home.experience} />
+      <HomeProjects title={'Recent Projects'} projects={home.projects} />
+      <HomeClients logos={home.clientLogos} />
+      <Testimonials testimonials={home.testimonials} />
+      <Recent posts={blog.edges} />
+    </Fragment>
+  );
+};
 
 IndexPage.propTypes = {
   data: PropTypes.object.isRequired,
-}
+};
 
-export default IndexPage
+export default IndexPage;
 
-export const pageQuery = graphql`
+export const homeQuery = graphql`
   {
-    index: allMdx(filter: { fileAbsolutePath: { regex: "/index/index/" } }) {
-      edges {
-        node {
-          frontmatter {
-            seoTitle
-            useSeoTitleSuffix
-            useSplashScreen
+    home: datoCmsHome {
+      seoMetaTags {
+        ...GatsbyDatoCmsSeoMetaTags
+      }
+      headline
+      aboutNode {
+        childMarkdownRemark {
+          html
+        }
+      }
+      testimonials {
+        id
+        quote
+        person
+        company
+      }
+      experience {
+        id
+        company
+        job
+        timeframe
+        detailsNode {
+          childMarkdownRemark {
+            html
           }
         }
       }
-    }
-    hero: allMdx(filter: { fileAbsolutePath: { regex: "/index/hero/" } }) {
-      edges {
-        node {
-          body
-          frontmatter {
-            greetings
-            title
-            subtitlePrefix
-            subtitle
-            icon {
-              childImageSharp {
-                fluid(maxWidth: 60, quality: 90) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+      clientLogos {
+        fluid(maxWidth: 200, imgixParams: { fm: "jpg", auto: "compress" }) {
+          ...GatsbyDatoCmsFluid_noBase64
+        }
+      }
+      projects {
+        id
+        projectTitle
+        projectTags
+        projectLink
+        projectImage {
+          fluid(maxWidth: 600, imgixParams: { fm: "png", auto: "compress" }) {
+            ...GatsbyDatoCmsFluid_noBase64
           }
+        }
+        projectDescriptionNode {
+          childMarkdownRemark {
+            html
+          }
+        }
+        projectColor {
+          hex
         }
       }
     }
-    about: allMdx(filter: { fileAbsolutePath: { regex: "/index/about/" } }) {
-      edges {
-        node {
-          body
-          frontmatter {
-            title
-            image {
-              childImageSharp {
-                fluid(maxWidth: 400, quality: 90) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    interests: allMdx(
-      filter: { fileAbsolutePath: { regex: "/index/interests/" } }
+    blog: allDatoCmsStandardBlog(
+      sort: { fields: [meta___publishedAt], order: DESC }
+      limit: 2
     ) {
       edges {
         node {
-          exports {
-            shownItems
-            interests {
-              name
-              icon {
-                childImageSharp {
-                  fixed(width: 20, height: 20, quality: 90) {
-                    ...GatsbyImageSharpFixed
-                  }
-                }
-              }
-            }
+          id
+          title
+          slug
+          meta {
+            firstPublishedAt(formatString: "MMMM Do, YYYY")
+            publishedAt(formatString: "MMMM Do, YYYY")
           }
-          frontmatter {
-            title
+          dateOverride(formatString: "MMMM Do, YYYY")
+          contentNode {
+            childMarkdownRemark {
+              excerpt(truncate: true)
+            }
           }
         }
       }
     }
-    projects: allMdx(
-      filter: {
-        fileAbsolutePath: { regex: "/index/projects/" }
-        frontmatter: { visible: { eq: true } }
-      }
-      sort: { fields: [frontmatter___position], order: ASC }
-    ) {
-      edges {
-        node {
-          body
-          frontmatter {
-            title
-            category
-            emoji
-            external
-            github
-            screenshot {
-              childImageSharp {
-                fluid(maxWidth: 400, quality: 90) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            tags
-            position
-            buttonVisible
-            buttonUrl
-            buttonText
-          }
+    desktopImage: file(relativePath: { eq: "bg.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
-    contact: allMdx(
-      filter: { fileAbsolutePath: { regex: "/index/contact/" } }
-    ) {
-      edges {
-        node {
-          body
-          frontmatter {
-            title
-            name
-            email
-          }
+    mobileImage: file(relativePath: { eq: "cm.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid_noBase64
         }
       }
     }
   }
-`
+`;
