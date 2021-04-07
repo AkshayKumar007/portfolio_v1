@@ -1,27 +1,22 @@
-import React, { Fragment } from 'react';
-import styled from 'styled-components';
-import SEO from '../components/SEO';
+import React from "react"
+import Layout from "../components/Layout"
+import { Link } from "gatsby"
+import SEO from "../components/SEO"
 
-const Wrap = styled.div`
-  background: ${props => props.theme.gradients.red};
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: calc(100vh - 454px);
-  min-height: 300;
-`;
+const Error = () => {
+  return (
+    <Layout>
+      <SEO title="Dead End" />
+      <main className="error-page">
+        <div className="error-container">
+          <h1>oops it's a dead end</h1>
+          <Link to="/" className="btn">
+            back home
+          </Link>
+        </div>
+      </main>
+    </Layout>
+  )
+}
 
-const NotFoundPage = () => (
-  <Fragment>
-    <SEO title="404 | Page Not Found | Chase Ohlson" />
-    <Wrap>
-      <h1>404</h1>
-      <p>Page Not Found</p>
-    </Wrap>
-  </Fragment>
-);
-
-export default NotFoundPage;
+export default Error

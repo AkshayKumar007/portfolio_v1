@@ -1,36 +1,25 @@
-const path = require('path');
+const path = require("path")
 
-exports.createPages = ({ graphql, actions }) => {
-    const { createPage } = actions;
+// create pages dynamically
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+  const result = await graphql(`
+    {
+      blogs: allStrapiBlogs {
+        nodes {
+          slug
+        }
+      }
+    }
+  `)
 
-    const standardPosts = new Promise((resolve, reject) => {
-        graphql(`
-            {
-                allDatoCmsStandardBlog(limit: 10000) {
-                    edges {
-                        node {
-                            slug
-                        }
-                    }
-                }
-            }
-        `).then(result => {
-            const posts = result.data.allDatoCmsStandardBlog.edges;
-
-            // Create Pages
-            posts.map(post => {
-                let { slug } = post.node;
-                createPage({
-                    path: `/${slug}`,
-                    component: path.resolve(`./src/templates/StandardBlog.js`),
-                    context: {
-                        slug,
-                    },
-                });
-            });
-            resolve();
-        });
-    });
-
-    return Promise.all([standardPosts]);
-};
+  result.data.blogs.nodes.forEach(blog => {
+    createPage({
+      path: `/blogs/${blog.slug}`,
+      component: path.resolve(`src/templates/blog-template.js`),
+      context: {
+        slug: blog.slug,
+      },
+    })
+  })
+}

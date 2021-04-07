@@ -10,10 +10,10 @@ const ContainerWrapper = styled.section`
   margin: auto;
   padding: 0 60px;
   box-sizing: border-box;
-  @media (max-width: ${props => props.theme.sizes.tablet}) {
+  @media (max-width: 600px) {
     padding: 0 40px;
   }
-  @media (max-width: ${props => props.theme.sizes.mobile}) {
+  @media (max-width: 900px) {
     padding: 0 20px;
   }
 `;

@@ -1,111 +1,43 @@
-import React, { Fragment, useState } from 'react';
-import { graphql } from 'gatsby';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import React from "react"
+import Layout from "../components/Layout"
+import { graphql } from "gatsby"
+import Blogs from "../components/Blogs"
+import SEO from "../components/SEO"
 
-import Container from '../components/Container';
-import Button from '../components/Button';
-import PostCardGroup from '../components/PostCardGroup';
-
-import helpers from '../util/helpers';
-import PageSEO from '../components/PageSEO';
-
-const HeroWrapper = styled.div`
-  height: 400px;
-  background: ${props => props.theme.gradients.red};
-  section {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    width: 1020px;
-    max-width: 100%;
-    margin: auto;
-    h1 {
-      margin: 0;
-      color: white;
-      font-size: 6rem;
-      line-height: 8rem;
-    }
-  }
-`;
-
-const PostsWrapper = styled.div`
-  padding: 6rem 0;
-  section {
-    width: 1020px;
-    max-width: 100%;
-    flex-direction: column;
-    div.load {
-      text-align: center;
-      margin-top: 6rem;
-    }
-  }
-`;
-
-export default function Blog({ data: { page, blogData } }) {
-  const renderPosts = () => {
-    const { edges } = blogData;
-    const chunks = helpers.chunkArray(Array.from(edges), 2);
-    return chunks.map((group, index) => (
-      <PostCardGroup
-        posts={group}
-        topBorder={index === 0}
-        key={`group-${index}`}
-      />
-    ));
-  };
-
+const Blog = ({
+  data: {
+    allStrapiBlogs: { nodes: blogs },
+  },
+}) => {
   return (
-    <Fragment>
-      <PageSEO meta={page.seoMetaTags} />
-      <HeroWrapper>
-        <Container>
-          <h1>The</h1>
-          <h1>Latest</h1>
-        </Container>
-      </HeroWrapper>
-      <PostsWrapper>
-        <Container>{renderPosts()}</Container>
-      </PostsWrapper>
-    </Fragment>
-  );
+    <Layout>
+      <SEO title="Blog" />
+      <section className="blog-page">
+        <Blogs blogs={blogs} title="blog" />
+      </section>
+    </Layout>
+  )
 }
 
-Blog.propTypes = {
-  data: PropTypes.object.isRequired,
-};
-
-export const blogQuery = graphql`
+export const query = graphql`
   {
-    page: datoCmsBlogPage {
-      seoMetaTags {
-        ...GatsbyDatoCmsSeoMetaTags
-      }
-      title
-    }
-    blogData: allDatoCmsStandardBlog(
-      sort: { fields: [meta___publishedAt], order: DESC }
-      limit: 1000
-    ) {
-      edges {
-        node {
-          id
-          slug
-          title
-          dateOverride(formatString: "MMMM Do, YYYY")
-          meta {
-            firstPublishedAt(formatString: "MMMM Do, YYYY")
-            publishedAt(formatString: "MMMM Do, YYYY")
-          }
-          contentNode {
-            childMarkdownRemark {
-              excerpt
+    allStrapiBlogs {
+      nodes {
+        slug
+        desc
+        date(formatString: "MMMM Do, YYYY")
+        id
+        title
+        category
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
             }
           }
         }
       }
     }
   }
-`;
+`
+export default Blog

@@ -1,38 +1,25 @@
-/* eslint-disable react/prop-types */
-import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import styled, { ThemeProvider } from 'styled-components';
+import React from "react"
+// import "../css/main.css"
+import Navbar from "./Navbar"
+import Sidebar from "./Sidebar"
+import Footer from "./Footer"
+import Header from "./Header"
 
-import GlobalStyle from '../styles/Global';
-import Theme from '../styles/Theme';
+const Layout = ({ children }) => {
+  const [isOpen, setIsOpen] = React.useState(false)
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen)
+  }
 
-import Header from './Header';
-import Footer from './Footer';
+  return (
+    <>
+      <Header/>
+      {/* <Navbar toggleSidebar={toggleSidebar} /> */}
+      <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
+      {children}
+      <Footer />
+    </>
+  )
+}
 
-const SiteRoot = styled.div`
-  background: white;
-  padding-top: 80px;
-`;
-
-const Layout = ({ children, location }) => (
-  <SiteRoot>
-    <Helmet>
-      <link rel="preconnect" href="https://datocms-assets.com" />
-    </Helmet>
-    <GlobalStyle />
-    <ThemeProvider theme={Theme}>
-      <>
-        <Header location={location} />
-        {children}
-        <Footer />
-      </>
-    </ThemeProvider>
-  </SiteRoot>
-);
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-export default Layout;
+export default Layout

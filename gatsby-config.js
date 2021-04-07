@@ -1,143 +1,60 @@
-const proxy = require('http-proxy-middleware');
-const siteConfig = require('./config/siteConfig');
-require('dotenv').config({
-    path: `.env.${process.env.NODE_ENV}`,
-});
+/**
+ * Configure your Gatsby site with this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/gatsby-config/
+ */
 
 module.exports = {
-    siteMetadata: {
-        ...siteConfig,
+  siteMetadata: {
+    title: "WebDev Portfolio",
+    description: "This is WebDev Portfolio Site",
+    author: "@webdev",
+    twitterUsername: "@john_smilga",
+    image: "/twitter-img.png",
+    siteUrl: "https://testing-strapi-gatsby-build.netlify.app",
+  },
+  plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-anchor-links',
+      options: {
+        offset: -90,
+      },
     },
-    plugins: [
-        'gatsby-plugin-react-helmet',
-        'gatsby-plugin-styled-components',
-        'gatsby-transformer-sharp',
-        'gatsby-plugin-sharp',
-        {
-            resolve: 'gatsby-plugin-anchor-links',
-            options: {
-                offset: -90,
-            },
-        },
-    // {
-    //   resolve: require.resolve('../gatsby-plugin-anchor-links'),
-    //   options: {
-    //     offset: -90,
-    //   },
-    // },
-        {
-            resolve: 'gatsby-plugin-sitemap',
-            options: {
-                output: siteConfig.sitemapPath,
-            },
-        },
-        {
-            resolve: 'gatsby-plugin-canonical-urls',
-            options: {
-            siteUrl: siteConfig.siteUrl,
-            },
-        },
-        {
-            resolve: 'gatsby-plugin-layout',
-            options: {
-            component: require.resolve('./src/components/Layout.js'),
-            },
-        },
-        {
-            resolve: 'gatsby-source-filesystem',
-            options: {
-            name: 'images',
-            path: `${__dirname}/src/images`,
-            },
-        },
-        {
-        resolve: 'gatsby-plugin-nprogress',
-        options: {
-                color: '#212529',
-            },
-        },
-        {
-            resolve: 'gatsby-source-datocms',
-            options: {
-                apiToken: process.env.DATO_CMS,
-            },
-        },
-        {
-            resolve: 'gatsby-plugin-manifest',
-            options: {
-                name: 'chase-ohlson',
-                short_name: 'Chase',
-                start_url: '/',
-                background_color: '#212529',
-                theme_color: '#212529',
-                display: 'minimal-ui',
-                icon: 'src/images/icon.png',
-            },
-        },
-        {
-            resolve: 'gatsby-plugin-robots-txt',
-            options: {
-                host: 'https://chaseohlson.com',
-                sitemap: 'https://chaseohlson.com/sitemap.xml',
-            },
-        },
-        {
-            resolve: 'gatsby-transformer-remark',
-            options: {
-                plugins: [
-                    {
-                        resolve: 'gatsby-remark-external-links',
-                        options: {
-                            target: '_blank',
-                            rel: 'nofollow noopener noreferrer',
-                        },
-                    },
-                    {
-                        resolve: 'gatsby-remark-prismjs',
-                        options: {
-                            classPrefix: 'language-',
-                            inlineCodeMarker: true,
-                            aliases: {},
-                            showLineNumbers: false,
-                            noInlineHighlight: false,
-                        },
-                    },
-                ],
-            },
-        },
-        {
-            resolve: 'gatsby-plugin-google-analytics',
-            options: {
-                trackingId: process.env.GOOGLE_ID,
-                head: false,
-            },
-        },
-        {
-            resolve: 'gatsby-plugin-hubspot',
-            options: {
-                trackingCode: process.env.HUBSPOT_PORTAL_ID,
-                respectDNT: true,
-                productionOnly: false,
-            },
-        },
-        {
-            resolve: 'gatsby-plugin-sentry',
-            options: {
-                dsn: process.env.SENTRY_DSN,
-                environment: process.env.NODE_ENV,
-                enabled: (() => ['production'].indexOf(process.env.NODE_ENV) !== -1)(),
-            },
-        },
-    ],
-    developMiddleware: app => {
-        app.use(
-            '/.netlify/functions/',
-            proxy({
-                target: 'http://localhost:9000',
-                pathRewrite: {
-                    '/.netlify/functions/': '',
-                },
-            })
-        );
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/src/assets/`,
+      },
     },
-};
+    {
+      resolve: `gatsby-source-strapi`,
+      options: {
+        apiURL: "http://localhost:1337",
+        queryLimit: 1000, // Default to 100
+        // contentTypes: [`jobs`, `projects`, `blogs`, ],
+        //singleTypes:[`about` ]
+        contentTypes: [`jobs`, `projects`, `blogs`],
+        singleTypes: [`about`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: "Roboto",
+              variants: ["400", "700"],
+            },
+            { family: "Open Sans" },
+          ],
+        },
+      },
+    },
+  ],
+}

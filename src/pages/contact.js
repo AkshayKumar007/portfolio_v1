@@ -1,50 +1,43 @@
-import React, { Fragment } from 'react';
-import styled from 'styled-components';
-import { graphql, useStaticQuery } from 'gatsby';
+import React from "react"
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
-import Container from '../components/Container';
-import ContactForm from '../components/ContactForm';
-import PageSEO from '../components/PageSEO';
-
-const ContactWrapper = styled.div`
-  background: white;
-  margin: 6rem 0;
-  section {
-    width: 1020px;
-    max-width: 100%;
-    margin: auto;
-    flex-direction: column;
-  }
-`;
-const contactQuery = graphql`
-  {
-    page: datoCmsContactPage {
-      seoMetaTags {
-        ...GatsbyDatoCmsSeoMetaTags
-      }
-      title
-      hubspotForm
-      hubspotPortal
-    }
-  }
-`;
-
-const Contact = () => {
-  const { page } = useStaticQuery(contactQuery);
+const contact = () => {
   return (
-    <Fragment>
-      <PageSEO meta={page.seoMetaTags} />
-      <ContactWrapper>
-        <Container>
-          <h2>{page.title}</h2>
-          <ContactForm
-            hubspotForm={page.hubspotForm}
-            hubspotPortal={page.hubspotPortal}
-          />
-        </Container>
-      </ContactWrapper>
-    </Fragment>
-  );
-};
+    <Layout>
+      <SEO title="Contact" />
+      <section className="contact-page">
+        <article className="contact-form">
+          <h3>get in touch</h3>
+          <form action="https://formspree.io/YOUR_ID" method="POST">
+            <div className="form-group">
+              <input
+                type="text"
+                name="name"
+                placeholder="name"
+                className="form-control"
+              />
+              <input
+                type="email"
+                placeholder="email"
+                name="email"
+                className="form-control"
+              />
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="message"
+                className="form-control"
+              ></textarea>
+            </div>
+            <button type="submit" className="submit-btn btn">
+              submit here
+            </button>
+          </form>
+        </article>
+      </section>
+    </Layout>
+  )
+}
 
-export default Contact;
+export default contact
