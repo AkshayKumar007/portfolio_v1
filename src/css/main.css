@@ -733,6 +733,15 @@ Projects
 .project-desc {
   /* word-spacing: 15px; */
   color: #DBE1E4; /* var(--clr-grey-3) */
+  display: grid;
+  grid-template-columns: auto 1fr;
+  /* column-gap: -1rem; */
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+.project-desc p {
+  margin-bottom: auto;
+  color: var(--clr-grey-3);
 }
 .project-stack {
   margin-bottom: 1rem;

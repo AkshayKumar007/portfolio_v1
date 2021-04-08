@@ -1,7 +1,6 @@
 import React, { useEffect, useState, Fragment } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import logo from "../assets/logo-grey.png";
 import icon from "../assets/icon.png"
 import { Link, StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
@@ -221,9 +220,9 @@ export default function Header({ location }) {
         <AnchorLink to="/#experience">03. Experience</AnchorLink>
         <AnchorLink to="/#projects">04. Projects</AnchorLink>
         <AnchorLink to="/#contact" className="divider">05. Contact</AnchorLink> {/*className="divider"*/}
-        <a href="https://drive.google.com/file/d/1OCQhkNOsiiy8UzQpV1BKVgpp4F0889fW/view?usp=sharing" target="_blank" >Resume</a>
+        <a href="https://drive.google.com/file/d/1OCQhkNOsiiy8UzQpV1BKVgpp4F0889fW/view?usp=sharing">Resume</a>
         {/* <Link className="divider" to={'/contact'}>
-          Contact
+          target="_blank" Contact
         </Link> */}
         {/* <Link to={'/blog'}>Blog</Link> */}
       </Fragment>

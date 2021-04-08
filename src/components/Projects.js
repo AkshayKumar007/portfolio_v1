@@ -1,7 +1,7 @@
 import React from "react"
 import Title from "./Title"
 import Project from "./Project"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 const Projects = ({ projects, title }) => {
   return (
     <section id="projects" className="section projects">

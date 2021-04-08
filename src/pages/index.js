@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
-import Services from "../components/Services"
+// import Services from "../components/Services"
 import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
 // import Blogs from "../components/Blogs"
@@ -13,8 +13,8 @@ import Contact from "../components/contact1"
 
 export default ({ data }) => {
   const {
-    allStrapiProjects: { nodes: projects },
-    allStrapiBlogs: { nodes: blogs },
+    allStrapiNprojects: { nodes: projects },
+    // allStrapiBlogs: { nodes: blogs },
   } = data
 
   return (
@@ -25,7 +25,7 @@ export default ({ data }) => {
       {/* <Services /> */}
       <Skills />
       <Jobs />
-      <Projects projects={projects} title="featured projects" showLink />
+      <Projects projects={projects} title="featured projects" />
       {/* <Blogs blogs={blogs} title="latest articles" showLink /> */}
       <Contact/>
     </Layout>
@@ -50,6 +50,29 @@ export const query = graphql`
         stack {
           id
           title
+        }
+      }
+    }
+    allStrapiNprojects(filter: { featured: { eq: true } }) {
+      nodes {
+        github
+        id
+        title
+        url
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        stack {
+          id
+          title
+        }
+        description {
+            id
+            name
         }
       }
     }
