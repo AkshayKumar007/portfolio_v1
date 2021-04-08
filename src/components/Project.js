@@ -1,7 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Image from "gatsby-image"
-import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
+// import { FaGithub } from "react-icons/fa";
+import { GrShare } from "react-icons/gr";
+import { FiGithub } from "react-icons/fi";
+
 const Project = ({ description, title, github, stack, url, image, index }) => {
   return (
     <article className="project">
@@ -19,10 +22,10 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
         </div>
         <div className="project-links">
           <a href={github}>
-            <FaGithubSquare className="project-icon" />
+            <FiGithub className="project-icon" />
           </a>
           <a href={url}>
-            <FaShareSquare className="project-icon" />
+            <GrShare className="project-icon" />
           </a>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from "react"
 import { FaCode, FaFigma, FaPython, FaJava, FaReact, FaLinux } from "react-icons/fa"
-import {SiJavascript, SiDjango, SiPostgresql} from "react-icons/si"
+import {SiJavascript, SiDjango, SiPostgresql, SiCplusplus} from "react-icons/si"
 export default [
   {
     id: 0,
@@ -27,24 +27,28 @@ export default [
     icon: <FaJava className="skill-icon" />,
     title: "Java",
   },
-    
   {
     id: 5,
+    icon: <SiCplusplus className="skill-icon" />,
+    title: "C++",
+  },
+  {
+    id: 6,
     icon: <SiDjango className="skill-icon" />,
     title: "Django",
   },
   {
-    id: 6,
+    id: 7,
     icon: <FaReact className="skill-icon" />,
     title: "React.js",
   },
 {
-    id: 7,
+    id: 8,
     icon: <SiPostgresql className="skill-icon" />,
     title: "PosgreSQL",
   },
   {
-    id: 8,
+    id: 9,
     icon: <FaLinux className="skill-icon" />,
     title: "Linux",
   },
