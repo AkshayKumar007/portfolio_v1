@@ -582,6 +582,7 @@ Jobs
 }
 
 .job-btn {
+  color: #838383;
   background: transparent;
   border-color: transparent;
   text-transform: capitalize;
@@ -898,6 +899,15 @@ Pages
   background: #202028; /* #202028 var(--clr-grey-10) */
   min-height: calc(100vh - 5rem - 9rem);
 }
+.contact-page .section-title {
+  color: #524EEE;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.contact-page p {
+
+}
 .error-page {
   display: grid;
   place-items: center;
@@ -995,23 +1005,28 @@ Contact Page
   padding: 5rem 0;
 }
 .contact-form {
-  background: var(--clr-white);
-  border-radius: var(--radius);
+  background: #0C0C14; /* #0C0C14 var(--clr-white) */
+  border-top-left-radius: 0.4rem; /* var(--radius) */
+  border-top-right-radius: 0.4rem;
   text-align: center;
+  /* padding-top: 0.2rem; */
   box-shadow: var(--light-shadow);
   transition: var(--transition);
   width: 90vw;
-  max-width: 35rem;
+  max-width: 30rem;
+  height: 20rem;
 }
 .contact-form:hover {
   box-shadow: var(--dark-shadow);
 }
 .contact-form h3 {
-  padding-top: 1.25rem;
+  padding-top: 0.2rem;
   color: var(--clr-grey-5);
 }
 .form-group {
-  padding: 1rem 1.5rem;
+  height: 20rem;
+  /* padding-top: 1.5rem; */
+  padding: 1.5rem 1.5rem;
 }
 .form-control {
   display: block;
@@ -1019,23 +1034,25 @@ Contact Page
   padding: 0.75rem 1rem;
   border: none;
   margin-bottom: 1.25rem;
-  background: var(--clr-grey-10);
-  border-radius: var(--radius);
-  text-transform: uppercase;
-  letter-spacing: var(--spacing);
+  color: white;
+  background: #24242b; /* #24242b var(--clr-grey-10) */
+  border-radius: 0.3rem; /* var(--radius) */
+  /* text-transform: uppercase; */
+  /* letter-spacing: var(--spacing); */
 }
 .form-control::placeholder {
   font-family: var(--ff-primary);
-  color: var(--clr-grey-1);
+  color: white; /* var(--clr-grey-1) */
   text-transform: uppercase;
   letter-spacing: var(--spacing);
 }
+
 .submit-btn {
   display: block;
   width: 100%;
   padding: 1rem;
-  border-bottom-left-radius: var(--radius);
-  border-bottom-right-radius: var(--radius);
+  border-bottom-left-radius: 0.4rem; /* var(--radius) */
+  border-bottom-right-radius: 0.4rem; /* var(--radius) */
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }

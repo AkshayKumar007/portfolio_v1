@@ -1,8 +1,7 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Image from "gatsby-image"
-// import { FaGithub } from "react-icons/fa";
-import { GrShare } from "react-icons/gr";
+import React from "react";
+import PropTypes from "prop-types";
+import Image from "gatsby-image";
+import { RiShareBoxLine} from "react-icons/ri";
 import { FiGithub } from "react-icons/fi";
 
 const Project = ({ description, title, github, stack, url, image, index }) => {
@@ -25,7 +24,7 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
             <FiGithub className="project-icon" />
           </a>
           <a href={url}>
-            <GrShare className="project-icon" />
+            <RiShareBoxLine className="project-icon" />
           </a>
         </div>
       </div>
