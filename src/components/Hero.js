@@ -16,7 +16,7 @@ const Hero = () => {
             <div className="underline"></div>
             <h2>I build things for the web.</h2>
             <div className="hero-text">
-              <p>I'm a Boston-based software engineer who specializes in building (and occasionally designing) exceptional digital experiences. <br /> Currently, I'm an engineer at Upstatement focused on building accessible, human-centered products.</p>
+              <p>I'm a Bengaluru, India - based software engineer who specializes in designing and building web appliactions using React.js and Django. <br /> Currently, I'm an undergraduate at Sir M. Visvesvaraya Institute of Technology majoring in Computer Science.</p>
             </div>
             <Link to="/contact" className="btn">
               Get In Touch

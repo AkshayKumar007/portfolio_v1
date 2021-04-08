@@ -5,10 +5,7 @@ const Footer = () => {
     <footer className="footer">
       <div>
         <SocialLinks styleClass="footer-links"></SocialLinks>
-        {/* <h4> &copy;*/}
-           
-          <span> Designed & Built By Akshay Kumar {new Date().getFullYear()} </span>
-        {/* </h4> */}
+          <span> Designed & Built by <span  className="auth-name"> Akshay Kumar </span> </span> {/*{new Date().getFullYear()} */}
       </div>
     </footer>
   )

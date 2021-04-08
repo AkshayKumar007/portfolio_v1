@@ -35,10 +35,11 @@ const About = () => {
   return (
     
       <section id="about" className="about-page">
+        <Title title={title} />
         <div className="section-center about-center">
           <Image fluid={image.childImageSharp.fluid} className="about-img" />
           <article className="about-text">
-            <Title title={title} />
+            {/* <Title title={title} /> */}
             <p>{info}</p>
             <div className="about-stack">
               {stack.map(item => {

@@ -26,24 +26,24 @@ const HeaderWrapper = styled.nav`
       &.open {
         button {
           div {
-            background: linear-gradient(90deg, #81E6D9, #3EABA4);
+            background: #30FFB9; /* linear-gradient(90deg, #81E6D9, #3EABA4) */
             &.second {
               opacity: 0;
             }
             &.first {
               transform: rotate(45deg);
-              top: 1.1rem;
+              top: 0.5rem;
             }
             &.third {
               transform: rotate(-45deg);
-              bottom: 1.1rem;
+              bottom: 0.8rem;
             }
           }
         }
       }
       button {
-        height: 2.5rem;
-        width: 3.5rem;
+        height: 1.5rem;
+        width: 2.0rem;
         position: relative;
         background: transparent;
         padding: 0;
@@ -52,7 +52,7 @@ const HeaderWrapper = styled.nav`
           transition: all 0.2s;
           height: 3px;
           width: 100%;
-          background: #212529;
+          background: white; /* white #212529 */
           position: absolute;
           &.first {
             top: 0;
@@ -145,7 +145,7 @@ const HeaderWrapper = styled.nav`
       }
       
       a {
-        color: #212529;
+        color: white; /*#212529*/
         margin-bottom: 3rem;
         &.divider {
           margin-bottom: 6rem;
@@ -157,7 +157,7 @@ const HeaderWrapper = styled.nav`
             left: 0;
             width: 100%;
             height: 0.2rem;
-            background: #EF412D;
+            background: #524EEE; /* #524EEE #EF412D */
           }
         }
       }
@@ -177,7 +177,7 @@ const HeaderWrapper = styled.nav`
 `;
 
 const HeaderMenuMask = styled.div`
-  background: white; /*#161B25*/
+  background: #202028; /*#161B25*/
   position: absolute;
   top: 0;
   left: 0;
