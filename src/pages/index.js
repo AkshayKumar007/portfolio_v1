@@ -19,7 +19,7 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Home" description="this is our home page" />
+      <SEO title="Akshay Kumar" description="this is our home page" />
       <Hero />
       <About />
       {/* <Services /> */}
