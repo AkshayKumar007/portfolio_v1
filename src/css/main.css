@@ -625,9 +625,7 @@ Jobs
   color: #30FFB9; /* #30FFB9 var(--clr-primary-5) */
   box-shadow: 0 2px var(--clr-primary-5);
 }
-.job-info {
-  /* min-height: 420px; */
-}
+
 .job-info h3 {
   color: white; /* #B5E9EE #30FFB9 */
   font-weight: 1000;
