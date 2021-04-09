@@ -2,7 +2,8 @@ import React, { useEffect, useState, Fragment } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import icon from "../assets/icon.png"
-import { Link, StaticQuery, graphql } from 'gatsby';
+import { Link } from 'gatsby';
+// import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { useScrollYPosition } from 'react-use-scroll-position';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
