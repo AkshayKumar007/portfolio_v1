@@ -50,7 +50,7 @@
     },
 ```
 
-1. Start the gatsby development server using command
+5. Start the gatsby development server using command
 
    ```sh
    npm run develop
@@ -64,8 +64,4 @@
    npm run build
    ```
 
-1. Preview the site as it will appear once deployed
-
-   ```sh
-   npm run serve
-   ```
+2. Either use netlify-CLI or drag and drop public folder after build to deploy on netlify.
