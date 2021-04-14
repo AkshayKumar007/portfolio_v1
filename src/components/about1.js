@@ -1,7 +1,7 @@
-import React from "react"
-import Title from "./Title"
-import Image from "gatsby-image"
-import { graphql, useStaticQuery } from "gatsby"
+import React from "react";
+import Title from "./Title";
+import Image from "gatsby-image";
+import { graphql, useStaticQuery } from "gatsby";
 
 const query = graphql`
   {

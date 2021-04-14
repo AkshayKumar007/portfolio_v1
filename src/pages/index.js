@@ -1,15 +1,15 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/Layout"
-import Hero from "../components/Hero"
-// import Services from "../components/Services"
-import Jobs from "../components/Jobs"
-import Projects from "../components/Projects"
-// import Blogs from "../components/Blogs"
-import Skills from "../components/Skills"
-import SEO from "../components/SEO"
-import About from "../components/about1"
-import Contact from "../components/contact1"
+import React from "react";
+import { graphql } from "gatsby";
+import Layout from "../components/Layout";
+import Hero from "../components/Hero";
+// import Services from "../components/Services";
+import Jobs from "../components/Jobs";
+import Projects from "../components/Projects";
+// import Blogs from "../components/Blogs";
+import Skills from "../components/Skills";
+import SEO from "../components/SEO";
+import About from "../components/about1";
+import Contact from "../components/contact1";
 
 export default ({ data }) => {
   const {
@@ -19,7 +19,7 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Akshay Kumar" description="this is our home page" />
+      <SEO title="Akshay Kumar" description="This is Akshay Kumar\'s Portfolio Site" />
       <Hero />
       <About />
       {/* <Services /> */}

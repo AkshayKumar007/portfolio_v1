@@ -5,6 +5,7 @@ import { RiShareBoxLine} from "react-icons/ri";
 import { FiGithub } from "react-icons/fi";
 
 const Project = ({ description, title, github, stack, url, image, index }) => {
+  description = Array.from(description);
   return (
     <article className="project">
       {image && (
@@ -14,6 +15,7 @@ const Project = ({ description, title, github, stack, url, image, index }) => {
         <span className="project-number">0{index + 1}.</span>
         <h3>{title || "default title"}</h3>
         {/* <p className="project-desc">{description}</p> */}
+        
         {description.map(item => {
           return (
               <p key={item.id} className="project-desc">{item.name}</p>
