@@ -5,7 +5,7 @@
   Akshay Kumar Portfolio - v1
 </h1>
 <p align="center">
-  This is the 1st iteration of <a href="" target="_blank">akshay-kumar-007.com</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> & <a href="https://strapi.io/" target="_blank"> Strapi </a>and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
+  This is the 1st iteration of <a href="https://akshay-kumar.netlify.app/" target="_blank">akshay-kumar.netlify.app</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> & <a href="https://strapi.io/" target="_blank"> Strapi </a>and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
 </p>
 
 ![demo](static/twitter-img.png)
@@ -50,7 +50,7 @@
     },
 ```
 
-1. Start the gatsby development server using command
+5. Start the gatsby development server using command
 
    ```sh
    npm run develop
@@ -64,8 +64,4 @@
    npm run build
    ```
 
-1. Preview the site as it will appear once deployed
-
-   ```sh
-   npm run serve
-   ```
+2. Either use netlify-CLI or drag and drop public folder after build to deploy on netlify.
